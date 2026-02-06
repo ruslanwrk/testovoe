@@ -1,0 +1,9 @@
+- name: Copy postgres compose
+  copy:
+    src: ../../../../docker/postgres/docker-compose.yml
+    dest: /home/vagrant/docker-compose.yml
+
+- name: Start postgres
+  shell: docker-compose up -d
+  args:
+    chdir: /home/vagrant

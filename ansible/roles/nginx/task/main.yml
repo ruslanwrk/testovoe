@@ -1,0 +1,14 @@
+- name: Copy nginx config
+  copy:
+    src: nginx.conf
+    dest: /home/vagrant/nginx.conf
+
+- name: Copy nginx compose
+  copy:
+    src: ../../../../docker/nginx/docker-compose.yml
+    dest: /home/vagrant/docker-compose.yml
+
+- name: Start nginx
+  shell: docker-compose up -d
+  args:
+    chdir: /home/vagrant

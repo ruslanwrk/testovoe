@@ -1,0 +1,9 @@
+- name: Copy backend compose
+  copy:
+    src: ../../../../docker/backend/docker-compose.yml
+    dest: /home/vagrant/docker-compose.yml
+
+- name: Start backend (3 replicas)
+  shell: docker-compose up -d --scale backend=3
+  args:
+    chdir: /home/vagrant
