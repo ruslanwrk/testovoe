@@ -1,1 +1,6 @@
-spVASLKDvks
+Клонируй: git clone https://github.com/ruslanwrk/testovoe && cd testovoe 
+Установи: vagrant virtualbox ansible docker 
+Подними: vagrant up && ansible-playbook playbook.yml 
+Проверь: curl http://192.168.56.10/ && ./check.sh 
+Масштаб: vagrant ssh backend && docker-compose up --scale backend=5 
+Убери: vagrant destroy
