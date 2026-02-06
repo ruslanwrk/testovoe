@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  backend:
+    image: m1sse/fastapi-backend:latest
+    environment:
+      DATABASE_URL: postgresql://app:app@192.168.56.12:5432/app
+    ports:
+      - "8000"
